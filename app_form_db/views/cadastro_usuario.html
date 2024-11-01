@@ -13,37 +13,29 @@
             <div class="row mt-5">
                 
             <div class="col-12">
-                <a href="/agendamentos" class="btn btn-link">Agendamentos</a>
-            </div>
-            <div class="col-12">
-                <a href="/sair" class="btn btn-link">Sair</a>
+                <a href="/login" class="btn btn-link">Login</a>
             </div>
 
                 {{#erro_form}}
                 <div class="col-6 offset-3">
                     <div class="alert alert-danger">
-                        <strong>Dados incorretos.</strong>
-                        Nenhum campo pode estar vazio. 
+                        <strong>Cadastro inválido.</strong> 
                     </div>
                 </div>
                 {{/erro_form}}
 
-                <form action="/dados" method="post">
+                <form action="/cadastro" method="post">
                     <div class="col-6 offset-3 mt-3">
                         <label for="nome" class="form-label">Nome:</label>
-                        <input type="text" class="form-control" name="nome" id="nome" value="{{nome}}">
+                        <input type="text" class="form-control" name="nome" id="nome">
                     </div>
                     <div class="col-6 offset-3 mt-3">
-                        <label for="endereco" class="form-label">Endereço:</label>
-                        <input type="text" class="form-control" name="endereco" id="endereco" value="{{endereco}}">
+                        <label for="email" class="form-label">e-mail:</label>
+                        <input type="email" class="form-control" name="email" id="email">
                     </div>
                     <div class="col-6 offset-3 mt-3">
-                        <label for="telefone" class="form-label">Telefone:</label>
-                        <input type="text" class="form-control" name="telefone" id="telefone" value="{{telefone}}">
-                    </div>
-                    <div class="col-6 offset-3 mt-3">
-                        <label for="data_agendamento" class="form-label">Data de agendamento:</label>
-                        <input type="date" class="form-control" name="data_agendamento" id="data_agendamento" value="{{data_agendamento}}">
+                        <label for="senha" class="form-label">Senha:</label>
+                        <input type="password" class="form-control" name="senha" id="senha">
                     </div>
                     <div class="col-6 offset-3 mt-3">
                         <button type="submit" class="w-100 btn btn-success">Enviar</button>
